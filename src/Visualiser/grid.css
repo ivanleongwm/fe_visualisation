@@ -14,3 +14,13 @@
     outline: 1px solid grey;
     display:inline-block;
 }
+
+ol {
+    display: table;
+    text-align: left;
+  }
+
+table, th, td {
+    border: 1px solid;
+    margin: 0 auto;
+}

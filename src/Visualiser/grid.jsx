@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Node from './Node/Node'
 import './grid.css'
 
-const HOLES = 8
+const HOLES = 12
 
 export default function Grid() {
     const [state, setState] = useState({
@@ -353,11 +353,29 @@ export default function Grid() {
                         })}
                     </div>
                 })}
-                <p>FenixBox Description</p>
+                <h2>FenixBox 12-Hole Simulator</h2>
                 <button onClick={changeMirrorMode}>Remove Mirror</button>
                 <button onClick={changeMirrorMode}>Add Normal Mirror</button>
                 <button onClick={changeMirrorMode}>Add Infinite Mirror</button>
                 <button onClick={changeMirrorMode}>Shoot Ray</button>
+                <h3>Description:</h3>
+                <table>
+                    <tr>
+                        <th>Click one of the four buttons to select an action.</th>
+                    </tr>
+                    <li><b>Add Normal Mirror:</b> Click to activate, and click any cell in the box <br/> to add a mirror.
+                        Each subquent click on the same cell adds one life.
+                    </li> 
+                    <li>
+                        <b>Add Infinite Mirror:</b> Adds a mirror that doesn't break.
+                    </li>
+                    <li>
+                        <b>Shoot Ray:</b> Click on the grey cell edges of the box to shoot a ray from there.
+                    </li>
+                    <li>
+                        <b>Remove mirror:</b> Select and click on existing mirror in grid to remove it.
+                    </li>
+                </table>
             </div>
         </div>
     )

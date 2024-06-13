@@ -354,15 +354,19 @@ export default function Grid() {
                     </div>
                 })}
                 <h2>FenixBox 12-Hole Simulator</h2>
-                <button onClick={changeMirrorMode}>Remove Mirror</button>
-                <button onClick={changeMirrorMode}>Add Normal Mirror</button>
-                <button onClick={changeMirrorMode}>Add Infinite Mirror</button>
-                <button onClick={changeMirrorMode}>Shoot Ray</button>
-                <h3>Description:</h3>
-                <table>
+                <button class="button-24" onClick={changeMirrorMode}>Remove Mirror</button><div class="divider"/>
+                <button class="button-24" onClick={changeMirrorMode}>Add Normal Mirror</button><div class="divider"/>
+                <button class="button-24" onClick={changeMirrorMode}>Add Infinite Mirror</button> <div class="divider"/>
+                <button class="button-29" onClick={changeMirrorMode}>Shoot Ray</button>
+                <br/><br/>
+                <table class="content-table">
+                    <thead>
+                        <th>Description</th>
+                    </thead>
                     <tr>
                         <th>Click one of the four buttons to select an action.</th>
                     </tr>
+                    <tr>
                     <li><b>Add Normal Mirror:</b> Click to activate, and click any cell in the box <br/> to add a mirror.
                         Each subquent click on the same cell adds one life.
                     </li> 
@@ -375,6 +379,7 @@ export default function Grid() {
                     <li>
                         <b>Remove mirror:</b> Select and click on existing mirror in grid to remove it.
                     </li>
+                    </tr>
                 </table>
             </div>
         </div>
